@@ -7,7 +7,7 @@ using System;
     {
         public class CareerCloudContext : DbContext
         {
-        public static readonly ILoggerFactory MyLoggerFactory
+         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
 
         public DbSet<ApplicantEducationPoco> ApplicantEducation { get; set; }

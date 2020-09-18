@@ -9,13 +9,15 @@ using System.Linq.Expressions;
 namespace CareerCloud.EntityFrameworkDataAccess
 {
 
+
+
     public class EFGenericRepository<T> : IDataRepository<T> where T : class
     {
         private CareerCloudContext _context;
 
         public EFGenericRepository(bool createProxy = true)
         {
-            _context = new CareerCloudContext(createProxy);
+            _context = new CareerCloudContext();
         }
         public void Add(params T[] items)
         {
@@ -31,7 +33,7 @@ namespace CareerCloud.EntityFrameworkDataAccess
             throw new NotImplementedException();
         }
 
-        public IList<T> GetAll(params Expression<Func<T, object>>[] navigationProperties)
+        public IQueryable<T> GetAll(params Expression<Func<T, object>>[] navigationProperties)
         {
             IQueryable<T> dbQuery = _context.Set<T>();
 
@@ -39,7 +41,7 @@ namespace CareerCloud.EntityFrameworkDataAccess
             {
                 dbQuery = dbQuery.Include<T, object>(navigationProperty);
             }
-            return dbQuery.ToList<T>();
+            return dbQuery;
         }
 
         public IList<T> GetList(Expression<Func<T, bool>> where, params Expression<Func<T, object>>[] navigationProperties)
@@ -73,6 +75,11 @@ namespace CareerCloud.EntityFrameworkDataAccess
             _context.SaveChanges();
         }
 
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
+        }
+
         public void Update(params T[] items)
         {
             foreach (T item in items)
@@ -88,5 +95,8 @@ namespace CareerCloud.EntityFrameworkDataAccess
                 Console.WriteLine(e.Message);
             }
         }
+
+
+
     }
 }

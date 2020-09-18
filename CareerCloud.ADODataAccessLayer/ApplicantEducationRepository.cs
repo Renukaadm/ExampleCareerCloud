@@ -61,7 +61,7 @@ namespace CareerCloud.ADODataAccessLayer
             throw new NotImplementedException();
         }
 
-        public IList<ApplicantEducationPoco> GetAll(params Expression<Func<ApplicantEducationPoco, object>>[] navigationProperties)
+        public IQueryable<ApplicantEducationPoco> GetAll(params Expression<Func<ApplicantEducationPoco, object>>[] navigationProperties)
         {
             SqlConnection conn = new SqlConnection(BaseAdo.connectionString);
             SqlCommand cmd = new SqlCommand();
@@ -102,7 +102,7 @@ namespace CareerCloud.ADODataAccessLayer
                 x++;
             }
             conn.Close();
-            return pocos.Where(p => p != null).ToList();
+            return pocos.Where(p => p != null).AsQueryable();
 
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace CareerCloud.DataAccessLayer
 {
     public interface IDataRepository<T>
     {
-        IList<T> GetAll(params Expression<Func<T, object>>[] navigationProperties);
+        IQueryable<T> GetAll(params Expression<Func<T, object>>[] navigationProperties);
         IList<T> GetList(Expression<Func<T, bool>> where, params Expression<Func<T, object>>[] navigationProperties);
         T GetSingle(Expression<Func<T, bool>> where, params Expression<Func<T, object>>[] navigationProperties);
         void Add(params T[] items);

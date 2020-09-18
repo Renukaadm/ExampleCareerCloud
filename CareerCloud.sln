@@ -44,7 +44,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CareerCloud.SOAPService", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerCloud.Bridge", "CareerCloud.Bridge\CareerCloud.Bridge.csproj", "{89171D9A-8A51-45EA-BA7B-955F09DE4334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareerCloud.Bridge", "CareerCloud.Bridge\CareerCloud.Bridge.csproj", "{89171D9A-8A51-45EA-BA7B-955F09DE4334}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareerCloud.gRPC", "CareerCloud.gRPC\CareerCloud.gRPC.csproj", "{48FB0CAE-D70E-408B-A491-1E9731CFE62C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareerCloud.GraphQL", "CareerCloud.GraphQL\CareerCloud.GraphQL.csproj", "{C1BB646B-E596-4D4C-B515-8167BB028BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerCloud.OData", "CareerCloud.OData\CareerCloud.OData.csproj", "{DA83CC61-EFA1-4B3D-9C92-9B74FFDD6D00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +102,18 @@ Global
 		{89171D9A-8A51-45EA-BA7B-955F09DE4334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89171D9A-8A51-45EA-BA7B-955F09DE4334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89171D9A-8A51-45EA-BA7B-955F09DE4334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FB0CAE-D70E-408B-A491-1E9731CFE62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FB0CAE-D70E-408B-A491-1E9731CFE62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FB0CAE-D70E-408B-A491-1E9731CFE62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FB0CAE-D70E-408B-A491-1E9731CFE62C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1BB646B-E596-4D4C-B515-8167BB028BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BB646B-E596-4D4C-B515-8167BB028BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BB646B-E596-4D4C-B515-8167BB028BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BB646B-E596-4D4C-B515-8167BB028BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA83CC61-EFA1-4B3D-9C92-9B74FFDD6D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA83CC61-EFA1-4B3D-9C92-9B74FFDD6D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA83CC61-EFA1-4B3D-9C92-9B74FFDD6D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA83CC61-EFA1-4B3D-9C92-9B74FFDD6D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
